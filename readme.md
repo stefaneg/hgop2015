@@ -8,23 +8,37 @@ Getting started with this project template. After this you should have the proje
 
 INITIALIZE PROJECT FROM GITHUB AND GET UP AND RUNNING
 
-* fork this project - clone fork to src/ruprojects/tictactoe directory, or where ever you keep your project sources.
+* Using OsX or Linux: fork this project - clone fork to src/ruprojects/tictactoe directory, or where ever you keep your project sources.
+Clone your fork to a directory of your choosing.
+* Using Windows: Download the Vagrantfile only which is found [here](./vagrant/Vagrantfile) 
 * download [vagrant box](https://dl.dropboxusercontent.com/u/7122561/package.box) and put into "vagrant" directory in your
-working directory.
-* edit dockerbuild.sh file in your working directory
-  * line “docker build -t gulli/tictactoe ./dist/“
-  * change gulli to <yourname>
-* open a terminal window, navigate to the "vagrant" dir in your working directory and run
+working directory. In windows, create a directory to put both Vagrantfile and package.box (must be in same directory).
+
+* open a terminal window, navigate to the directory containing package.box and Vagrantfile and type
 
 ``` 
 vagrant up 
 vagrant ssh
 cd src/tictactoe
+``` 
+
+* In windows, open the virtual machine (Open Virtual Box, select VM and select "Show").
+* Open a Terminal window in the virtual machine. Clone your fork to a working directory of your choosing.
+* edit dockerbuild.sh file in your working directory
+  * line “docker build -t gulli/tictactoe ./dist/“
+  * change gulli to <yourname>
+
+
+Run in Terminal inside virtual machine, in your working directory:
+``` 
+npm install
+bower install
 ./dockerbuild
 
 ``` 
-Note that you are now inside the virtual machine, working in the same directory as before you
-did 'vagrant ssh', since the directory is mapped.
+
+In OsX or linux, you can edit files inside or outside the VM, since the drive is mapped to ~/src/tictactoe inside
+the virtual machine. Note: This directory is not useable on windows due to symlink limitations.
 
 ``` 
 docker push <yourname>/tictactoe"
