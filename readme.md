@@ -5,12 +5,12 @@ Getting started with this project template. After this you should have the proje
 development virtual machine.
 
 #### CentOs VM access problem:
-[Day 1](./hgop-docs/vagrant-ssh-problem)
+[Vagrant SSH Solution](./hgop-docs/vagrant-ssh-problem)
 
 ### Thursday 26.11
 
 #### Project increments, day by day
-[Day 1](./hgop-docs/day1)
+[Day 1](./hgop-docs/day1.md)
 
 ### Project backlog
 
