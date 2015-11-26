@@ -5,7 +5,7 @@ Getting started with this project template. After this you should have the proje
 development virtual machine.
 
 #### CentOs VM access problem:
-[Vagrant SSH Solution](./hgop-docs/vagrant-ssh-problem)
+[Vagrant SSH Solution](./hgop-docs/vagrant-ssh-problem.md)
 
 ### Thursday 26.11
 
