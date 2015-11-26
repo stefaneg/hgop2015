@@ -1,7 +1,8 @@
 HGOP Project Template (TicTacToe) 
 =========
 
-Getting started with this project template. After this you should have the project up-and-running on a Digital Ocean
+Getting started with this project template. After this you should have the project up-and-running on your
+development virtual machine.
 
 
 ### Thursday 26.11
