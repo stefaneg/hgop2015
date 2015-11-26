@@ -6,14 +6,33 @@ Getting started with this project template. After this you should have the proje
 
 ### Thursday 26.11
 
+VIRTUALBOX DEV ENVIRONMENT
+
+Make sure you have latest versions of Vagrant and VirtualBox installed.
+
+
 INITIALIZE PROJECT FROM GITHUB AND GET UP AND RUNNING
 
-* Using OsX or Linux: fork this project - clone fork to src/ruprojects/tictactoe directory, or where ever you keep your project sources.
-Clone your fork to a directory of your choosing.
-* Using Windows: Download the Vagrantfile only which is found [here](./vagrant/Vagrantfile) 
-* download [vagrant box](https://dl.dropboxusercontent.com/u/7122561/package.box) and put into "vagrant" directory in your
-working directory. In windows, create a directory to put both Vagrantfile and package.box (must be in same directory).
+Windows:
+* Download the Vagrantfile only which is found [here](./vagrant/Vagrantfile)
+* create a directory to put both Vagrantfile and package.box (must be in same directory).
+* edit Vagrantfile and remove folder mapping for /home/vagrant/src/tictactoe
+* open a terminal window, navigate to the directory containing package.box and Vagrantfile and type
 
+``` 
+vagrant up 
+vagrant ssh
+mkdir src
+cd src
+``` 
+Now clone your fork into this directory and cd into it. This is your working directory.
+
+
+OsX:
+* Fork this project - clone fork to src/ruprojects/tictactoe directory, or where ever you 
+keep your project sources. Clone your fork to a directory of your choosing.
+* Download [vagrant box](https://dl.dropboxusercontent.com/u/7122561/package.box) and put into "vagrant" 
+directory in your working directory. In windows, 
 * open a terminal window, navigate to the directory containing package.box and Vagrantfile and type
 
 ``` 
@@ -22,42 +41,36 @@ vagrant ssh
 cd src/tictactoe
 ``` 
 
-* In windows, open the virtual machine (Open Virtual Box, select VM and select "Show").
-* Open a Terminal window in the virtual machine. Clone your fork to a working directory of your choosing.
+BUILD DOCKER IMAGE
 * edit dockerbuild.sh file in your working directory
   * line “docker build -t gulli/tictactoe ./dist/“
   * change gulli to <yourname>
 
 
-Run in Terminal inside virtual machine, in your working directory:
+Run in Terminal inside virtual machine, in your working directory (/home/vagrant/src/tictactoe):
 ``` 
 npm install
 bower install
-./dockerbuild
+grunt serve
 
 ``` 
 
-In OsX or linux, you can edit files inside or outside the VM, since the drive is mapped to ~/src/tictactoe inside
-the virtual machine. Note: This directory is not useable on windows due to symlink limitations.
+You should now be able to open your browser on your computer (not in VM) and navigate to http://localhost:9000 and see Yeoman
+landing page. Try to figure out how that works.
 
-``` 
-docker push <yourname>/tictactoe"
-``` 
 
-VIRTUALBOX DEV ENVIRONMENT
+When done, spend some time studying technologies used today. 
 
-Make sure you have latest versions of Vagrant and VirtualBox installed.
+In your working directory root, create a file "report.md". 
+Write a paragraph in Icelandic on each of the following technologies describing what it does.
+* Vagrant
+* VirtualBox
+* Grunt
+* npm 
+* nodejs
+* bower
 
-Download vagrant virtual box from (location provided by teacher or USB stick)
-
-VIRTUALBOX TEST ENVIRONMENT
-On production/test server 
-
-``` 
-docker run -p 80:8080 -d -e "NODE_ENV=production" <yourname>/tictactoe
-``` 
-
-Navigate to http://yourServerIpAddress  and you should have yeoman landing page.
+and if you find other interesting stuff, feel free to say something about that too.
 
 
 ### Project backlog
