@@ -42,11 +42,7 @@ vagrant ssh
 cd src/tictactoe
 ``` 
 
-BUILD DOCKER IMAGE
-* edit dockerbuild.sh file in your working directory
-  * line “docker build -t gulli/tictactoe ./dist/“
-  * change gulli to <yourname>
-
+Build and get your project up and running.
 
 Run in Terminal inside virtual machine, in your working directory (/home/vagrant/src/tictactoe):
 ``` 
