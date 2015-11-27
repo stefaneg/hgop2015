@@ -16,6 +16,10 @@ with
 
 Run npm install after those changes.
 
+Edit karma.conf.js
+
+Replace "PhantomJS" with "Firefox"
+
 Install firefox in CentOs virtual machine. Note: Using vagrant destroy is not an option after this 
 unless you repackage the vagrant box.
 
