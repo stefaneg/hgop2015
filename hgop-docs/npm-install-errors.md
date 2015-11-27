@@ -23,7 +23,7 @@ Replace "PhantomJS" with "Firefox"
 Install firefox in CentOs virtual machine. Note: Using vagrant destroy is not an option after this 
 unless you repackage the vagrant box.
 
-Add this to .bashrc
+Add this to ~/.bashrc in CentOs virtual machine.
 ``` 
 export DISPLAY=:0
 ``` 
