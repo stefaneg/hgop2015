@@ -59,7 +59,7 @@ Create your test virtualmachine somewhere outside your src working directory.
 In a directory of your choosing run
 
 ```
-vagrant init webdevops/docker
+vagrant init webdevops/ubuntu-docker
 ```
 Edit the Vagrantfile generated and add:
 ```
