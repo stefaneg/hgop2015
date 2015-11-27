@@ -1,13 +1,13 @@
 ### What does it do?
 
-*Vagrant
+* #####Vagrant:
 
-*VirtualBox
+* #####VirtualBox:
 
-*Grunt
+* #####Grunt:
 
-*npm
+* #####npm:
 
-*nodejs
+* #####nodejs:
 
-*bower
+* #####bower:
