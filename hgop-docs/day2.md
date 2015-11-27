@@ -18,12 +18,12 @@ docker ps
 If it still complains, contact the teacher.
 
 * Create account on docker.com, <yourname> refers to docker username. This is neccessary in order to be able to do docker push
-
+* Edit dockerbuild.sh and exchange "gulli" with your username.
  
 ``` 
 npm install
 bower install
-./dockerbuild
+./dockerbuild.sh
 ``` 
 
 
