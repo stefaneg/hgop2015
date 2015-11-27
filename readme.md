@@ -14,6 +14,7 @@ development virtual machine.
 
 #### Project increments, day by day
 [Day 1](./hgop-docs/day1.md)
+
 [Day 2](./hgop-docs/day2.md)
 
 ### Project backlog
