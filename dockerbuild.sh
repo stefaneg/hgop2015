@@ -12,6 +12,6 @@ cd dist
 npm install --production
 
 echo Building docker image
-docker build -t gulli/tictactoe .
+docker build -t katur/tictactoe .
 
 echo "Done"
