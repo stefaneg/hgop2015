@@ -1,7 +1,6 @@
 ### Before starting
 Make sure you've applied fixes for day 1. Remember creating your "report.md" and "aboutme.md"
 
-
 ### DOCKER
 
 Docker is already installed on centOs dev machine, however, it is not automatically started on boot time.
@@ -76,7 +75,7 @@ vagrant ssh into this server, you should be able to run the following successful
 dockerhub account name.
 
 ``` 
-docker run -p 80:8080 -d -e "NODE_ENV=production" <yourname>/tictactoe
+docker run -p 8080:8080 -d -e "NODE_ENV=production" <yourname>/tictactoe
 ``` 
 
 At this point, you have a dev environment and a production-test environment, but they are manually linked.
