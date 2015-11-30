@@ -10,6 +10,8 @@ development virtual machine.
 #### Project fixes
 [NPM install errors](./hgop-docs/npm-install-errors.md)
 
+[Installing and configuring Jenkins](./hgop-docs/jenkins-ci.md)
+
 ### Thursday 26.11
 
 #### Project increments, day by day
