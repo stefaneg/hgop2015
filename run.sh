@@ -6,9 +6,10 @@ CID=$(sudo docker ps | grep "tictactoe" | awk '{print $1}')
 if [ "$CID" != "" ];
 then
   echo "Killing old container"
-  sudo docker kill $CID
+  docker kill tictactoe
+  docker rm tictactoe
 fi
 
 # Start a new container
 echo "Starting new container"
-docker run -p 80:8080 -d -e "NODE_ENV=production" katur/tictactoe
+docker run -p 80:8080 -d --name tictactoe -e "NODE_ENV=production" katur/tictactoe
