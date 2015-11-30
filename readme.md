@@ -26,8 +26,7 @@ development virtual machine.
 
 *	Can update latest version in production by push of a button
   
-* Can get feedback on failing 
- Travis CI
+* Can get feedback on failed tests in CI
  
 *	Can play tic-tac-toe against another user
  Implement using TDD
