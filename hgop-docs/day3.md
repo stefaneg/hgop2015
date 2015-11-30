@@ -1,18 +1,5 @@
 # Day 3
 
-Hints: 
-* Docker command order for completing assignment from day 2 is kill, rm, pull, run. Use --name parameter to make this easy.
-* Start with making sure you can execute each step successfully from the command line before integrating into script and testing in build.
-* ./dockerbuild.sh must exit with failure if grunt fails, or if docker build fails. 
-  [Exit shell script based on exit code](http://stackoverflow.com/questions/90418/exit-shell-script-based-on-process-exit-code). 
-  Good way to fail build is to modify a test to fail.
-  
-* You must set up communication to test server to happen without interaction needed. Use ssh for that. See
- [SSH passwordless login](http://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/)
-* Do not include docker push in ./dockerbuild.sh
-
-
-
 Goal of today is to finish first two stories in the backlog. A commit stage which fails on
 tests, and deploy latest to test automatically. These must be separate projects in Jenkins.
 

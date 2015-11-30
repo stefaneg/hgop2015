@@ -4,10 +4,9 @@ HGOP Project Template (TicTacToe)
 Getting started with this project template. After this you should have the project up-and-running on your
 development virtual machine.
 
-#### CentOs VM access problem:
+#### Project fixes & step-by-step instructions
 [Vagrant SSH Solution](./hgop-docs/vagrant-ssh-problem.md)
 
-#### Project fixes
 [NPM install errors](./hgop-docs/npm-install-errors.md)
 
 [Installing and configuring Jenkins](./hgop-docs/jenkins-ci.md)
@@ -20,6 +19,8 @@ development virtual machine.
 [Day 2](./hgop-docs/day2.md)
 
 [Day 3](./hgop-docs/day3.md)
+
+[Day 4](./hgop-docs/day4.md)
 
 ### Project backlog
 
