@@ -99,3 +99,17 @@ components asked for on day one, how they relate to the concepts introduced in t
 "release antipatterns".
 
 
+### Hints 
+* Docker command order is kill, rm, pull, run. Use --name parameter to make this easy.
+* Start with making sure you can execute each step successfully from the command line before integrating into script and testing in build.
+* ./dockerbuild.sh must exit with failure if grunt fails, or if docker build fails. 
+  [Exit shell script based on exit code](http://stackoverflow.com/questions/90418/exit-shell-script-based-on-process-exit-code). 
+  Good way to fail build is to modify a test to fail.
+  
+* You must set up communication to test server to happen without interaction needed. Use static ip addresses
+ issued by Vagrant to establish fixed ip numbers, and ssh for non-interactive script execution. See
+ [Configuring private networks](https://docs.vagrantup.com/v2/networking/private_network.html)
+ and 
+ [SSH passwordless login](http://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/)
+ 
+* Do not include docker push in ./dockerbuild.sh
