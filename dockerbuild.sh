@@ -5,6 +5,10 @@ rm -rf ./dist
 
 echo Building app
 grunt
+rc=$?; 
+if [[ $rc != 0 ]]; then 
+    exit $rc; 
+fi
 
 cp ./Dockerfile ./dist/
 
