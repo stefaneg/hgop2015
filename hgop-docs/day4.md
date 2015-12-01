@@ -13,3 +13,4 @@ a programming perspective.
 Note that this is a thinking tool at this point - NOT a specification tool. We'll translate to specifications
 when writing the tests for this.
 
+Create a new md file called testExamples.md where you collect your examples and put in your project root.
