@@ -14,7 +14,13 @@ Follow instructions here:
 [Follow these instructions](http://blog.manula.org/2013/03/running-jenkins-under-different-user-in.html) to change
 jenkins user to vagrant.
 
-Make sure you can open firefox with a Jenkins script. Create a freestyle project and add a build step with the 
+Restart the jenkins service to ensure changes take, 
+
+Note that you need "Show" the desktop from Virtual box GUI before firefox can run.
+
+Make sure you can open firefox with a Jenkins script. 
+
+Create a freestyle project and add a build step with the 
 following shell script:
 
 ``` 
