@@ -28,8 +28,9 @@ Important: Commit to git **every** time a test passes for the first time.
 ``` 
 grunt watch:mochaTest
 ``` 
- execute server side tests as soon as anything changes.
+execute server side tests as soon as anything changes.
  
 ``` 
 grunt test watch
 ``` 
+execute client side tests as soon as anything changes.
