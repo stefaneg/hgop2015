@@ -22,6 +22,8 @@ development virtual machine.
 
 [Day 4](./hgop-docs/day4.md)
 
+[Day 5](./hgop-docs/day5.md)
+
 ### Project backlog
 
 *	Can update latest version in production by push of a button
@@ -74,3 +76,6 @@ development virtual machine.
 
 *	Can play-back any given game to see how it was played
  Use event sourcing - record every user interaction
+
+* Can trace binary back to version control.
+ Store git hash for commit and package in build.
