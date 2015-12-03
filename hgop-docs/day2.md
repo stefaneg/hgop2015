@@ -1,3 +1,5 @@
+# Day 2
+
 ### Before starting
 Make sure you've applied fixes for day 1. Remember creating your "report.md" and "aboutme.md"
 

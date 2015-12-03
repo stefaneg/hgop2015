@@ -6,11 +6,21 @@
 
 var errors = require('./components/errors');
 
-module.exports = function(app) {
+module.exports = function(app, config) {
+
+  var eventStore = require('.' + config.eventstore)();
 
   // Insert routes below
-  app.use('/api/things', require('./api/thing'));
-  
+  app.get("/api/testApi", function(req, res){
+    res.json({"test":"test"});
+  });
+
+  app.use('/api/gameHistory', require('./api/gameHistory')(eventStore).router);
+
+  app.use('/api/joinGame', require('./api/joinGame')(eventStore).router);
+  app.use('/api/placeMove', require('./api/placeMove')(eventStore).router);
+  app.use('/api/createGame', require('./api/createGame')(eventStore).router);
+
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(errors[404]);

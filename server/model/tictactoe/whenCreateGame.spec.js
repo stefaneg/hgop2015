@@ -16,7 +16,8 @@ describe('create game command', function(){
       id:"1234",
       event:"GameCreated",
       userName: "Gulli",
-      timeStamp: "2015.12.02T11:29:44"
+      timeStamp: "2015.12.02T11:29:44",
+      name:"TheFirstGame"
     }];
 
     var actualEvents = tictactoeCommandHandler(given).executeCommand(when);
@@ -28,6 +29,7 @@ describe('create game command', function(){
     given= [];
     when={
       id:"12347",
+      gameId:"1",
       comm:"CreateGame",
       userName : "Halli",
       name:"TheFirstGame",
@@ -35,13 +37,14 @@ describe('create game command', function(){
     };
     then=[{
       id:"12347",
+      gameId:"1",
       event:"GameCreated",
       userName: "Halli",
-      timeStamp: "2015.12.02T10:29:44"
+      timeStamp: "2015.12.02T10:29:44",
+      name:"TheFirstGame"
     }];
 
     var actualEvents = tictactoeCommandHandler(given).executeCommand(when);
-
     JSON.stringify(actualEvents).should.be.exactly(JSON.stringify(then));
   });
 });
