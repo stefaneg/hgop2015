@@ -5,4 +5,4 @@ if [ -z $SERVER_IP ] ; then
 fi
 
 sudo docker push katur/tictactoe
-ssh root@$SERVER_IP 'docker pull katur/tictactoe && bash -s' < run.sh  
+ssh root@$SERVER_IP 'bash -s' < run.sh  

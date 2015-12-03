@@ -1,14 +1,11 @@
 #!/bin/bash
-# Get the old container id
-CID=$(sudo docker ps | grep "tictactoe" | awk '{print $1}')
+# Pull latest image
+docker pull katur/tictactoe
 
 # Kill the old container
-if [ "$CID" != "" ];
-then
-  echo "Killing old container"
-  docker kill tictactoe
-  docker rm tictactoe
-fi
+echo "Killing old container"
+docker kill tictactoe
+docker rm tictactoe
 
 # Start a new container
 echo "Starting new container"
