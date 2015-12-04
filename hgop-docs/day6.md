@@ -5,6 +5,9 @@ integration code recently pushed to stefaneg/hgop2015 as a reference. You can
 copy-paste all new logic introduced in this push. You will also have to refactor 
 commands/events to work with gameIds. 
 
+Note that you should NOT replace your implementation of tictactoe. You must take
+your implementation and put in place of mine (tictactoeCommandHandler.js).
+
 You are done when you can post a create game command and get events with id back.
 
 Hints:
