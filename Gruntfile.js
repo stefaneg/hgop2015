@@ -1,6 +1,8 @@
 // Generated on 2014-11-25 using generator-angular-fullstack 2.0.13
 'use strict';
 
+console.log("process.env.MOCHA_REPORTER", process.env.MOCHA_REPORTER);
+
 module.exports = function (grunt) {
   var localConfig;
   try {
@@ -435,11 +437,11 @@ module.exports = function (grunt) {
 
     mochaTest: {
       options: {
-        reporter: 'spec'
+        reporter: process.env.MOCHA_REPORTER || 'spec',
+        captureFile:'server-tests.xml'
       },
       src: ['server/**/*.spec.js']
     },
-
     protractor: {
       options: {
         configFile: 'protractor.conf.js'

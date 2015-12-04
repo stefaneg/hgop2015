@@ -13,7 +13,7 @@ module.exports = function tictactoeCommandHandler(events) {
 
   _.each(events, function(event){
     var eventHandler = eventHandlers[event.event];
-    eventHandler && eventHandler(event);
+    if(eventHandler) eventHandler(event);
   });
 
   var handlers = {

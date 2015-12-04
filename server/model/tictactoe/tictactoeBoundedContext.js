@@ -6,8 +6,10 @@ module.exports = function(eventStore, commandHandler){
     handleCommand : function(cmd){
       var defer = q.defer();
       eventStore.loadEvents(cmd.gameId).then(function(eventStream){
+        var events;
+
         try{
-          var events = commandHandler(eventStream).executeCommand(cmd);
+          events = commandHandler(eventStream).executeCommand(cmd);
         } catch(e){
           defer.reject(e);
         }
@@ -21,4 +23,4 @@ module.exports = function(eventStore, commandHandler){
       return defer.promise;
     }
   }
-}
+};

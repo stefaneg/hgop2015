@@ -31,3 +31,7 @@ firefox
 Running this project should open a new firefox window on your CentOs desktop.
 
 Grunt build and your ssh deployment script should now run without problems.
+
+Note that /usr/local/bin is not in Jenkins path by default, you'll have to add
+it to the path in order to be able to execute npm, bower and grunt.
+
