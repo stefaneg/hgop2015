@@ -4,13 +4,15 @@ var should = require('should');
 var request = require('supertest');
 var acceptanceUrl = process.env.ACCEPTANCE_URL;
 
+
 describe('TEST ENV GET /api/gameHistory', function () {
 
-  it('Should have ACCEPTANCE_URL environment variable exported.',function(){
-      acceptanceUrl.should.be.ok;
+  it('Should have ACCEPTANCE_URL environment variable exported.', function () {
+    acceptanceUrl.should.be.ok;
   });
 
-  it('should respond with JSON array with created events for game', function (done) {
+  it('should execute same test using old style', function () {
+
     var command =     {
       id : "1234",
       gameId : "999",
@@ -25,7 +27,7 @@ describe('TEST ENV GET /api/gameHistory', function () {
       .post('/api/createGame')
       .type('json')
       .send(command)
-      .end(function(err, res) {
+      .end(function (err, res) {
         if (err) return done(err);
         request(acceptanceUrl)
           .get('/api/gameHistory/999')
@@ -47,4 +49,14 @@ describe('TEST ENV GET /api/gameHistory', function () {
           });
       });
   });
+
+
+   it('Should execute fluid API test', function (done) {
+     /*
+     given(user("YourUser").createsGame("TheFirstGame"))
+     .expect("GameCreated").withName("TheFirstGame").isOk(done);
+      */
+     done();
+   });
+
 });
