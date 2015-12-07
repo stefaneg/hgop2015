@@ -20,5 +20,8 @@ that looks like the image below.
 
 ![Jenkins Screenshot](./jenkins_screenshot.png "Jenkins screenshot")
 
+The Acceptance Stage should run deployment to your test server and API acceptance tests
+against that server. It must fail (show as red) if either fails.
+
 - Hint: Use "Build after other projects are built" to get build items to chain like this.
 
