@@ -11,7 +11,7 @@ describe('TEST ENV GET /api/gameHistory', function () {
     acceptanceUrl.should.be.ok;
   });
 
-  it('should execute same test using old style', function () {
+  it('should execute same test using old style', function (done) {
 
     var command =     {
       id : "1234",
