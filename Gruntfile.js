@@ -130,6 +130,7 @@ module.exports = function (grunt) {
         },
         src: [
           'server/**/*.js',
+          '!server/**/*.acceptance.js',
           '!server/**/*.spec.js'
         ]
       },
@@ -674,7 +675,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+    'test:server',
+    'test:client',
     'build'
   ]);
 };
