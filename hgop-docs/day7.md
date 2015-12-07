@@ -33,3 +33,39 @@ the run successfully, the test system must be restarted.
 ``` 
  docker restart <container name>  
 ``` 
+
+- Hint: When writing fluid API's, the trick lies in creating a "builder" object
+that accumulates state passed in with methods, and returns the object so that
+further methods on it can be called in a chain. Example:
+
+``` 
+
+function given(cmdName){
+  var cmd={
+    name:cmdName,
+    destination:undefined
+  };
+  var expectations = [];
+  var givenApi = {
+    sendTo: function(dest){
+      cmd.destination = dest;
+      return givenApi;
+    },
+    expect: function(eventName){
+      expectations.push(eventName);
+      return givenApi;
+    },
+    and: givenApi.expect,
+    when: function(done){
+      .. perform test logic here.
+      .. call done in the end
+      done()
+    }
+  }
+  return givenApi;
+}
+
+
+given("commandA").sentTo("C").expect('B').and('C').when(done);
+
+``` 
