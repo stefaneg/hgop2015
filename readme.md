@@ -28,6 +28,8 @@ development virtual machine.
 
 [Day 7](./hgop-docs/day7.md)
 
+[Day 8](./hgop-docs/day8.md)
+
 ### Project backlog
 
 *	Can update latest version in production by push of a button
