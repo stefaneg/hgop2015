@@ -11,7 +11,11 @@ your implementation and put in place of mine (tictactoeCommandHandler.js).
 You are done when you can post a create game command and get events with id back.
 
 Hints:
-- You'll have to install 'q' to use the memory store.
+- You'll have to install 'q' to use the memory store. 
+``` 
+npm install q --save
+
+``` 
 - Change gameHistory.spec.js to mata
 - Adapt router.js and change the verbs there to match those in your commands.
 
