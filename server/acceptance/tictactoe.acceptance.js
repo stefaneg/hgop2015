@@ -4,18 +4,20 @@ var should = require('should');
 var request = require('supertest');
 var acceptanceUrl = process.env.ACCEPTANCE_URL;
 
+var given = require('../fluid-api/tictactoeFluid').given;
+var user = require('../fluid-api/tictactoeFluid').user;
 
 describe('TEST ENV GET /api/gameHistory', function () {
 
   it('Should have ACCEPTANCE_URL environment variable exported.', function () {
-    acceptanceUrl.should.be.ok;
+    acceptanceUrl.should.be.ok();
   });
 
   it('should execute same test using old style', function (done) {
 
-    var command =     {
-      id : "1234",
-      gameId : "999",
+    var command = {
+      id: "1234",
+      gameId: "100000",
       comm: "CreateGame",
       userName: "Gulli",
       name: "TheFirstGame",
@@ -30,7 +32,7 @@ describe('TEST ENV GET /api/gameHistory', function () {
       .end(function (err, res) {
         if (err) return done(err);
         request(acceptanceUrl)
-          .get('/api/gameHistory/999')
+          .get('/api/gameHistory/100000')
           .expect(200)
           .expect('Content-Type', /json/)
           .end(function (err, res) {
@@ -39,7 +41,7 @@ describe('TEST ENV GET /api/gameHistory', function () {
             should(res.body).eql(
               [{
                 "id": "1234",
-                "gameId": "999",
+                "gameId": "100000",
                 "event": "GameCreated",
                 "userName": "Gulli",
                 "name": "TheFirstGame",
@@ -52,11 +54,8 @@ describe('TEST ENV GET /api/gameHistory', function () {
 
 
    it('Should execute fluid API test', function (done) {
-     /*
      given(user("YourUser").createsGame("TheFirstGame"))
      .expect("GameCreated").withName("TheFirstGame").isOk(done);
-      */
-     done();
    });
 
 });
