@@ -6,7 +6,10 @@ amount of traffic that a production server on similar hardware will be able to h
 Update your gruntfile with the latest from stefaneg/hgop2015 project, this will add
 capability to run *.load.js tests.
 
+``` 
+export ACCEPTANCE_URL=http://<address of your api>
 grunt mochaTest:load
+``` 
 
 Copy tictactoe.load.js from stefaneg/hgop2015 project. Adapt it to use the fluid API you
 wrote for acceptance tests.
