@@ -1,4 +1,4 @@
-### Day 8
+### Day 8 - full acceptance test + build pipeline
 
 Assignment of today is to extend the test written yesterday to cover a game played
 to a draw. This test should now read something like this (but not _exactly_ like 

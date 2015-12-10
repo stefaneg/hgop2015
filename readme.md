@@ -14,21 +14,23 @@ development virtual machine.
 ### Thursday 26.11
 
 #### Project increments, day by day
-[Day 1](./hgop-docs/day1.md)
+[Day 1 - getting started](./hgop-docs/day1.md)
 
-[Day 2](./hgop-docs/day2.md)
+[Day 2 - deployment script](./hgop-docs/day2.md)
 
-[Day 3](./hgop-docs/day3.md)
+[Day 3 - continuous integration](./hgop-docs/day3.md)
 
-[Day 4](./hgop-docs/day4.md)
+[Day 4 - gather examples](./hgop-docs/day4.md)
 
-[Day 5](./hgop-docs/day5.md)
+[Day 5 - implement game logic](./hgop-docs/day5.md)
 
-[Day 6](./hgop-docs/day6.md)
+[Day 6 - integrate REST server](./hgop-docs/day6.md)
 
-[Day 7](./hgop-docs/day7.md)
+[Day 7 - acceptance testing 1](./hgop-docs/day7.md)
 
-[Day 8](./hgop-docs/day8.md)
+[Day 8 - acceptance testing 2](./hgop-docs/day8.md)
+
+[Day 9 - capacity load testing](./hgop-docs/day9.md)
 
 ### Project backlog
 
