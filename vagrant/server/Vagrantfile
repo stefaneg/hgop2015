@@ -35,8 +35,11 @@ Vagrant.configure(2) do |config|
   # your network.
   # config.vm.network "public_network"
 
-# Web server port exposed by main docker app
+# Web server port exposed by test docker app
   config.vm.network "forwarded_port", guest: 8080, host: 9090
+
+# Web server port exposed by production docker app
+  config.vm.network "forwarded_port", guest: 8081, host: 9091
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
