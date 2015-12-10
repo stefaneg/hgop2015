@@ -10,7 +10,8 @@ var user = require('../fluid-api/tictactoeFluid').user;
 describe('TEST ENV GET /api/gameHistory', function () {
 
   it('Should have ACCEPTANCE_URL environment variable exported.', function () {
-    acceptanceUrl.should.be.ok();
+    /*jshint -W030 */
+    acceptanceUrl.should.be.ok;
   });
 
   it('should execute same test using old style', function (done) {
