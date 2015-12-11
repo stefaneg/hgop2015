@@ -443,21 +443,21 @@ module.exports = function (grunt) {
       test: {
         options: {
           reporter: process.env.MOCHA_REPORTER || 'spec',
-          captureFile: 'server-tests'
+          captureFile: process.env.MOCHA_REPORT || 'server-tests.txt'
         },
         src: ['server/**/*.spec.js']
       },
       acceptance: {
         options: {
           reporter: process.env.MOCHA_REPORTER || 'spec',
-          captureFile: 'acceptance-tests'
+          captureFile: process.env.MOCHA_REPORT || 'acceptance-tests.txt'
         },
         src: ['server/**/*.acceptance.js']
       },
       load: {
         options: {
           reporter: process.env.MOCHA_REPORTER || 'spec',
-          captureFile: 'load-tests'
+          captureFile: process.env.MOCHA_REPORT || 'load-tests.txt'
         },
         src: ['server/**/*.load.js']
       }
