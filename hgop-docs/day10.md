@@ -34,6 +34,8 @@ http://<yourProdServer:port>/version.html
 
 In there is a link which should point you to the commit history for that git revision on Github.
 
+Check this by deploying an old version to production environment, and verify that it is old using
+version.html
 
 ## Report 
 
@@ -42,3 +44,4 @@ Add to your report.md
 to deploy any version and why?
 - What was wrong with having docker push in the deployment script rather than in the dockerbuild.sh 
  script?
+- How does the "deploy any version, anywhere" build feature work? Hint: Track GIT_COMMIT
