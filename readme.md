@@ -32,6 +32,10 @@ development virtual machine.
 
 [Day 9 - capacity load testing](./hgop-docs/day9.md)
 
+[Day 10 - traceability and deploy any version](./hgop-docs/day10.md)
+
+[Day 11 - integrate client and client smoke test](./hgop-docs/day11.md)
+
 ### Project backlog
 
 *	Can update latest version in production by push of a button
