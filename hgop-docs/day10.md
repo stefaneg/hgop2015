@@ -12,11 +12,15 @@ export MOCHA_REPORT=server-tests.xml
 
 ``` 
 
+Note that for this to work you need to have the Git Plugin and the build pipeline plugin installed.
+You need to have Git configured as SCM on all stages.
+
 - Change configuration of jUnit report plugin in Jenkins to pick up those reports
 - Move the docker push command from to dockerbuild.sh. (And remember to answer question below )
 - Change dockerbuild to mirror changes from teacher, that is, to tag with git revision hash.
 - Configure the build pipeline in Jenkins to show 5 builds. 
-- Change script in commit stage to pass $GIT_COMMIT to dockerbuild.sh
+- CORRECTION: This is not necessary: (Change script in commit stage to pass $GIT_COMMIT to dockerbuild.sh)
+$GIT_COMMIT is picked up by the script.
 - Change script in acceptance stage to pass on $GIT_PREVIOUS_SUCCESSFUL_COMMIT and port to your deployment
  script. Change your deployment script to map to the  port passed as parameter. (this is so you can run both production
  and test environments on one vagrant server. You can also create a new vagrant instance on another
