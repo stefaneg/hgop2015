@@ -1,0 +1,33 @@
+<div class="container">
+
+  <h3>Game on - {{gameState.name || 'NoName'}} </h3>
+
+  <span>{{ gameState | json}}</span>
+
+  <div ng-hide="gameState.joiningUser">
+    <a id="joinlink" target="_new" href="{{joinUrl}}">Send this link to your opponent.</a>
+  </div>
+
+  <div ng-hide="gameState.winner || gameState.gameDraw">
+    <div  ng-class="{myturn:myTurn()}">Me: <span id="myname">{{ me.userName }}</span> - {{ me.side }}</div>
+    <div  ng-class="{notmyturn:!myTurn()}">Opponent: <span id="opponentname">{{ other.userName }}</span> - {{ other.side }}</div>
+  </div>
+
+  <div ng-class="{'winner':gameState.winner}" ng-show="gameState.winner">
+     {{ gameState.winner.userName }} - {{ gameState.winner.side }} WINS!
+  </div>
+
+  <div class="draw" ng-show="gameState.gameDraw">
+    GAME DRAW!
+  </div>
+
+  <div id="gameboard" class="board">
+    <div class="ticrow" ng-repeat="row in gameState.board" ng-init="x=$index">
+      <div class="ticcell" ng-class="cell + ' x' + x + 'y' + y" ng-repeat="cell in row track by $index" ng-init="y=$index" ng-click="placeMove([x,y])">
+        {{cell}}
+      </div>
+    </div>
+
+  </div>
+
+</div>

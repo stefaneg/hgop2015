@@ -14,15 +14,20 @@ describe('join game command', function(){
     when={
       id:"12345",
       comm:"JoinGame",
-      userName : "Halli",
+      user:{
+        userName : "Halli",
+        side:'O'
+      },
       name:"TheFirstGame",
       timeStamp: "2015.12.02T11:30:50"
     };
     then=[{
       id:"12345",
       event:"GameJoined",
-      userName: "Halli",
-      otherUserName: "Gulli",
+      user:{
+        userName : "Halli",
+        side:'O'
+      },
       timeStamp: "2015.12.02T11:30:50"
     }];
 
@@ -36,14 +41,20 @@ describe('join game command', function(){
     when={
       id:"12345",
       comm:"JoinGame",
-      userName : "Halli",
+      user:{
+        userName : "Halli",
+        side: 'O'
+      },
       name:"TheFirstGame",
       timeStamp: "2015.12.02T11:30:55"
     };
     then=[{
       id:"12345",
       event:"GameDoesNotExist",
-      userName: "Halli",
+      user:{
+        userName : "Halli",
+        side: 'O'
+      },
       timeStamp: "2015.12.02T11:30:55"
     }];
 
