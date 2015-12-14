@@ -3,6 +3,9 @@
 Assignment for today is to add full traceability to deployed version, and to add capacity to 
 deploy any version that has been built hereafter to any environment (test or production). 
   
+  
+UPDATE: The following does not work due to extra output in report file...you can skip this for now.
+  
 Add server-side testing to test reports. In scripts that run tests (dockerbuild or grunt), 
 add the following exports:
 
@@ -11,6 +14,7 @@ export MOCHA_REPORTER=xunit
 export MOCHA_REPORT=server-tests.xml
 
 ``` 
+UPDATE ENDS
 
 Note that for this to work you need to have the Git Plugin and the build pipeline plugin installed.
 You need to have Git configured as SCM on all stages, and use build trigger "Build after other projects 
