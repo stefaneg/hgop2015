@@ -33,7 +33,7 @@ angular.module('tictactoeApp')
     }
 
     refresh();
-   // $interval(refresh, 2000);
+    $interval(refresh, 2000);
 
     function mySide() {
       return $location.search().gameSide;
