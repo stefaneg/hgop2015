@@ -34,7 +34,9 @@ development virtual machine.
 
 [Day 10 - traceability and deploy any version](./hgop-docs/day10.md)
 
-[Day 11 - integrate client and client smoke test](./hgop-docs/day11.md)
+[Day 11 - integrate client](./hgop-docs/day11.md)
+
+[Wrap up - turning the assignment in](./hgop-docs/wrapup.md)
 
 ### Project backlog
 
