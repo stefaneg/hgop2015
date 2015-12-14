@@ -20,16 +20,33 @@ Note that for this to work you need to have the Git Plugin and the build pipelin
 You need to have Git configured as SCM on all stages, and use build trigger "Build after other projects 
 are built."
 
-- Change configuration of jUnit report plugin in Jenkins to pick up those reports
+- SKIP THIS: Change configuration of jUnit report plugin in Jenkins to pick up those reports
 - Move the docker push command from to dockerbuild.sh. (And remember to answer question below )
 - Change dockerbuild to mirror changes from teacher, that is, to tag with git revision hash.
 - Configure the build pipeline in Jenkins to show 5 builds. 
 - CORRECTION: This is not necessary: (Change script in commit stage to pass $GIT_COMMIT to dockerbuild.sh)
 $GIT_COMMIT is picked up by the script.
-- Change script in acceptance stage to pass on $GIT_PREVIOUS_SUCCESSFUL_COMMIT and port to your deployment
- script. Change your deployment script to map to the  port passed as parameter. (this is so you can run both production
- and test environments on one vagrant server. You can also create a new vagrant instance on another
+
+## Link pipeline using git hash
+- Install Jenkins "Copy Artifact Plugin". 
+- In your Commit stage, add a post build step to archive dist/githash.txt.
+- In Acceptance stage, Capacity stage, add a "Copy artifacts from another project" build step. Make sure it
+is the first step in the stage (drag it up). It must be configured to copy artifacts from "Upstream project
+which triggered this build".
+- Add the following to the acceptance test deployment shell script in Jenkins.
+
+``` 
+export GIT_UPSTREAM_HASH=$(<dist/githash.txt)
+env
+....call your deployment script here and pass $GIT_UPSTREAM_HASH as a parameter.
+``` 
+  
+- Change your deployment script to map to the port passed as parameter. (this is so you can run both 
+ production and test environments on one vagrant server. You can also create a new vagrant instance on another
  ip address, and deploy production there.)
+
+
+
 - Create a new build stage for deploying to production. Copy script from acceptance deploy, change
 its parameters so it matches your production environment. No tests run here at this time.
 
